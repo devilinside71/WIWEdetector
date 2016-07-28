@@ -76,6 +76,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTDetector.vb" />
+    <Compile Include="BTDeviceInfo.vb" />
     <Compile Include="DataLoad.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>

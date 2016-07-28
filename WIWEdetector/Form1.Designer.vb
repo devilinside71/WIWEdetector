@@ -24,10 +24,11 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.ButtonScan = New System.Windows.Forms.Button()
         Me.TextBoxInfo = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.ButtonTest1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -46,7 +47,7 @@ Partial Class Form1
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(598, 277)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(670, 325)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'TableLayoutPanel2
@@ -55,6 +56,7 @@ Partial Class Form1
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.ButtonScan, 0, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.TextBoxInfo, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 0, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -62,8 +64,29 @@ Partial Class Form1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(502, 271)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(563, 319)
         Me.TableLayoutPanel2.TabIndex = 0
+        '
+        'ButtonScan
+        '
+        Me.ButtonScan.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ButtonScan.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.ButtonScan.Location = New System.Drawing.Point(3, 257)
+        Me.ButtonScan.Name = "ButtonScan"
+        Me.ButtonScan.Size = New System.Drawing.Size(557, 59)
+        Me.ButtonScan.TabIndex = 0
+        Me.ButtonScan.Text = "Keresés"
+        Me.ButtonScan.UseVisualStyleBackColor = True
+        '
+        'TextBoxInfo
+        '
+        Me.TextBoxInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBoxInfo.Location = New System.Drawing.Point(3, 66)
+        Me.TextBoxInfo.Multiline = True
+        Me.TextBoxInfo.Name = "TextBoxInfo"
+        Me.TextBoxInfo.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.TextBoxInfo.Size = New System.Drawing.Size(557, 185)
+        Me.TextBoxInfo.TabIndex = 1
         '
         'TableLayoutPanel3
         '
@@ -72,7 +95,7 @@ Partial Class Form1
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.ButtonTest1, 0, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(511, 3)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(572, 3)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 5
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
@@ -80,45 +103,33 @@ Partial Class Form1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(84, 271)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(95, 319)
         Me.TableLayoutPanel3.TabIndex = 1
-        '
-        'ButtonScan
-        '
-        Me.ButtonScan.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonScan.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.ButtonScan.Location = New System.Drawing.Point(3, 219)
-        Me.ButtonScan.Name = "ButtonScan"
-        Me.ButtonScan.Size = New System.Drawing.Size(496, 49)
-        Me.ButtonScan.TabIndex = 0
-        Me.ButtonScan.Text = "Keresés"
-        Me.ButtonScan.UseVisualStyleBackColor = True
-        '
-        'TextBoxInfo
-        '
-        Me.TextBoxInfo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBoxInfo.Location = New System.Drawing.Point(3, 57)
-        Me.TextBoxInfo.Multiline = True
-        Me.TextBoxInfo.Name = "TextBoxInfo"
-        Me.TextBoxInfo.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxInfo.Size = New System.Drawing.Size(496, 156)
-        Me.TextBoxInfo.TabIndex = 1
         '
         'ButtonTest1
         '
         Me.ButtonTest1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ButtonTest1.Location = New System.Drawing.Point(3, 3)
         Me.ButtonTest1.Name = "ButtonTest1"
-        Me.ButtonTest1.Size = New System.Drawing.Size(78, 48)
+        Me.ButtonTest1.Size = New System.Drawing.Size(89, 57)
         Me.ButtonTest1.TabIndex = 0
         Me.ButtonTest1.Text = "Button1"
         Me.ButtonTest1.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(3, 3)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(557, 35)
+        Me.TextBox1.TabIndex = 2
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(598, 277)
+        Me.ClientSize = New System.Drawing.Size(670, 325)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "Form1"
         Me.Text = "WIWE Bluetooth detector     ©2020 Sanatmetal Kft"
@@ -136,4 +147,5 @@ Partial Class Form1
     Friend WithEvents TextBoxInfo As TextBox
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents ButtonTest1 As Button
+    Friend WithEvents TextBox1 As TextBox
 End Class
