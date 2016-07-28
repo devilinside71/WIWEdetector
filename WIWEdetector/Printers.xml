@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<printers>
+  <printer name="Sós T TLP 2824 (ZPL)">
+    <winname>ZDesigner TLP 2824 Plus (ZPL)</winname>
+  </printer>
+  <printer name="Attila TLP 2824 (ZPL) 1">
+    <winname>ZDesigner TLP 2824 Plus (ZPL) (SM-TSOS3.ad.sanatmetal.hu)</winname>
+  </printer>
+  <printer name="Attila TLP 2824 (ZPL) 2">
+    <winname>\\SM-TSOS3.ad.sanatmetal.hu\ZDesigner TLP 2824 Plus (ZPL)</winname>
+  </printer>
+</printers> 
