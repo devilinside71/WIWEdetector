@@ -16,38 +16,59 @@ Imports InTheHand.Net.Sockets
 
 Module BTDetector
     Sub DetectBT()
+
+
         Dim devices As New List(Of BTDeviceInfo)()
         Dim bc As New InTheHand.Net.Sockets.BluetoothClient()
         Dim array As InTheHand.Net.Sockets.BluetoothDeviceInfo() = bc.DiscoverDevices()
         Dim count As Integer = array.Length
         Dim sText As String
+        Dim fullText As String
+        Dim hNap As String
+        Dim hSap As String
+        Dim hMac As String
 
+        Form1.TextBoxWIWE.Text = vbNullString
+        Form1.TextBoxInfo.Text = vbNullString
         sText = vbNullString
-        Form1.TextBox1.Text = vbNullString
+        fullText = vbNullString
         For i As Integer = 0 To count - 1
             Dim device As New BTDeviceInfo(array(i))
-            Console.WriteLine("------------------------------")
-            Console.WriteLine(device)
-            Console.WriteLine(Hex(device.Nap))
-            Console.WriteLine(Hex(device.Sap))
-            If IsWiwe(device.DeviceName, device.Nap) Then
-                sText = Hex(device.Nap) & Hex(device.Sap)
+            hNap = Hex(device.Nap)
+            hSap = Hex(device.Sap)
+            hMac = hNap & hSap
+            fullText = fullText & "------------------------" & vbCrLf
+            fullText = fullText & device.DeviceName & vbCrLf
+            fullText = fullText & hMac & vbCrLf
+
+            If IsWiwe(device.DeviceName, hNap) Then
+                sText = hMac
+                If IsInSQLDatabase(hMac) Then
+                    fullText = fullText & "WIWE az adatbázisban" & vbCrLf
+                Else
+                    fullText = fullText & "Új WIWE" & vbCrLf
+                    Call WriteToSQLDatabase(device.DeviceName, hMac)
+                    Call PrintZPL(hMac, 1)
+                End If
+            Else
+                fullText = fullText & "nem WIWE" & vbCrLf
             End If
         Next
+        Form1.TextBoxInfo.Text = fullText
         If sText = vbNullString Then
-            Form1.TextBox1.Text = "Nincs WIWE"
+            Form1.TextBoxWIWE.Text = "Nincs WIWE"
         Else
-            Form1.TextBox1.Text = sText
+            Form1.TextBoxWIWE.Text = sText
         End If
     End Sub
-    Private Function IsWiwe(device_name As String, device_nap As Long) As Boolean
+    Private Function IsWiwe(device_name As String, hdevice_nap As String) As Boolean
         'Ellenőrzi, hogy WIWE-e
         '1., WIWE a kezdete a névnek
         '2., B0B4 a BT chip gyártója
         Dim res As Boolean
 
         res = False
-        If device_name.StartsWith("WIWE") And Hex(device_nap) = "B0B4" Then
+        If device_name.StartsWith("WIWE") And hdevice_nap = "B0B4" Then
             res = True
         End If
 

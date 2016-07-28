@@ -28,7 +28,7 @@ Partial Class Form1
         Me.TextBoxInfo = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.ButtonTest1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxWIWE = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -56,7 +56,7 @@ Partial Class Form1
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.ButtonScan, 0, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.TextBoxInfo, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.TextBoxWIWE, 0, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -116,14 +116,14 @@ Partial Class Form1
         Me.ButtonTest1.Text = "Button1"
         Me.ButtonTest1.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'TextBoxWIWE
         '
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(3, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(557, 35)
-        Me.TextBox1.TabIndex = 2
+        Me.TextBoxWIWE.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBoxWIWE.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.TextBoxWIWE.Location = New System.Drawing.Point(3, 3)
+        Me.TextBoxWIWE.Name = "TextBoxWIWE"
+        Me.TextBoxWIWE.Size = New System.Drawing.Size(557, 35)
+        Me.TextBoxWIWE.TabIndex = 2
         '
         'Form1
         '
@@ -147,5 +147,5 @@ Partial Class Form1
     Friend WithEvents TextBoxInfo As TextBox
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents ButtonTest1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBoxWIWE As TextBox
 End Class

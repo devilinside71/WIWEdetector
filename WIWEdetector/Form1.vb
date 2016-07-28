@@ -9,4 +9,8 @@
             TextBoxInfo.SelectAll()
         End If
     End Sub
+
+    Private Sub ButtonScan_Click(sender As Object, e As EventArgs) Handles ButtonScan.Click
+        Call DetectBT()
+    End Sub
 End Class

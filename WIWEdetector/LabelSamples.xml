@@ -1,18 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <labels>
-    <label name="Szerszám">
+    <label name="WIWE01">
     <code>
       ^XA
       ^LH10,40
       ^FX Barcode Code128, Code39 is too wide
       ^FT0,35^BY2^BCN,60,Y,N,N^FDVONALKOD^FS
-      ^FX UTF-8 font selection: in printer's E memory
-      ^CWT,E:TT0003M_.FNT
-      ^CFT,22,22
-      ^CI28
-      ^FX ALAPMEGNEV
-      ^FT20,80^FH^FDALAPZPL^FS
-      ^FT20,100^FH^FDSARZS: ALAPSARZS^FS
       ^PQLABELQTY
       ^XZ
     </code>
