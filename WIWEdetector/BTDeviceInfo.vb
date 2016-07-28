@@ -14,6 +14,8 @@ Public Class BTDeviceInfo
     Private mdtmLastSeen As DateTime
     Private mdtmLastUsed As DateTime
     Private mblnRemembered As Boolean
+    Private mintRSSI As Integer
+
 
     Public Property DeviceName() As String
         Get
@@ -79,7 +81,14 @@ Public Class BTDeviceInfo
             mblnRemembered = value
         End Set
     End Property
-
+    Public Property RSSI As Integer
+        Get
+            Return mintRSSI
+        End Get
+        Set(value As Integer)
+            mintRSSI = value
+        End Set
+    End Property
     Public Sub New(device_info As BluetoothDeviceInfo)
         Me.Authenticated = device_info.Authenticated
         Me.Connected = device_info.Connected
@@ -89,6 +98,7 @@ Public Class BTDeviceInfo
         Me.Nap = device_info.DeviceAddress.Nap
         Me.Sap = device_info.DeviceAddress.Sap
         Me.Remembered = device_info.Remembered
+        Me.RSSI = device_info.Rssi
     End Sub
     Public Overrides Function ToString() As String
         Return Me.DeviceName

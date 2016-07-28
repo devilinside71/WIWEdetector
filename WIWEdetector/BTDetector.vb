@@ -24,6 +24,7 @@
             fullText = fullText & "------------------------" & vbCrLf
             fullText = fullText & device.DeviceName & vbCrLf
             fullText = fullText & hMac & vbCrLf
+            fullText = fullText & device.RSSI & vbCrLf
 
             If IsWiwe(device.DeviceName, hNap) Then
                 sText = hMac
