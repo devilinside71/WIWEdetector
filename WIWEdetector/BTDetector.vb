@@ -1,20 +1,4 @@
-﻿Imports System.Collections.Generic
-Imports System.Linq
-Imports System.Text
-Imports System.Windows
-Imports System.Windows.Controls
-Imports System.Windows.Data
-Imports System.Windows.Documents
-Imports System.Windows.Input
-Imports System.Windows.Media
-Imports System.Windows.Media.Imaging
-Imports System.Windows.Navigation
-Imports System.Windows.Shapes
-Imports System.ComponentModel
-Imports InTheHand.Net.Bluetooth
-Imports InTheHand.Net.Sockets
-
-Module BTDetector
+﻿Module BTDetector
     Sub DetectBT()
 
 
@@ -43,11 +27,11 @@ Module BTDetector
 
             If IsWiwe(device.DeviceName, hNap) Then
                 sText = hMac
-                If IsInSQLDatabase(hMac) Then
+                If IsMACInTable("WIWEdevices.s3db", hMac) Then
                     fullText = fullText & "WIWE az adatbázisban" & vbCrLf
                 Else
                     fullText = fullText & "Új WIWE" & vbCrLf
-                    Call WriteToSQLDatabase(device.DeviceName, hMac)
+                    Call InsertWIWEData("WIWEdevices.s3db", hMac, device.DeviceName)
                     Call PrintZPL(hMac, 1)
                 End If
             Else
