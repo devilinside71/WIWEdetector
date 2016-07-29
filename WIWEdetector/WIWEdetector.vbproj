@@ -45,6 +45,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\wiwe_06x01bt_Awa_2.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="InTheHand.Net.Personal, Version=3.5.605.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -122,6 +125,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Lib\WIWEdevices.s3db" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -143,6 +147,19 @@
     <Content Include="Printers.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\wiwe_06x01bt_Awa_2.ico" />
+    <None Include="Resources\WIWE-06x01bt.jpg" />
+    <None Include="Resources\bluetooth-logo.jpg" />
+    <None Include="Resources\WIWE-06.jpg" />
+    <None Include="Resources\2000px-Bluetooth.svg.png" />
+    <None Include="Resources\wiwelogo_41v_icon.ico" />
+    <None Include="Resources\sm_kicsi_1rU_icon.ico" />
+    <None Include="Resources\WIWElogo.jpg" />
+    <None Include="Resources\SM_nagy.jpg" />
+    <None Include="Resources\SM_kicsi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Arch\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

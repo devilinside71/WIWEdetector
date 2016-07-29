@@ -26,12 +26,13 @@ Partial Class Form1
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.ButtonScan = New System.Windows.Forms.Button()
         Me.TextBoxInfo = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.ButtonTest1 = New System.Windows.Forms.Button()
         Me.TextBoxWIWE = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -88,12 +89,22 @@ Partial Class Form1
         Me.TextBoxInfo.Size = New System.Drawing.Size(557, 185)
         Me.TextBoxInfo.TabIndex = 1
         '
+        'TextBoxWIWE
+        '
+        Me.TextBoxWIWE.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBoxWIWE.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.TextBoxWIWE.Location = New System.Drawing.Point(3, 3)
+        Me.TextBoxWIWE.Multiline = True
+        Me.TextBoxWIWE.Name = "TextBoxWIWE"
+        Me.TextBoxWIWE.Size = New System.Drawing.Size(557, 57)
+        Me.TextBoxWIWE.TabIndex = 2
+        '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.ColumnCount = 1
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.ButtonTest1, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.PictureBox1, 0, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(572, 3)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -106,24 +117,16 @@ Partial Class Form1
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(95, 319)
         Me.TableLayoutPanel3.TabIndex = 1
         '
-        'ButtonTest1
+        'PictureBox1
         '
-        Me.ButtonTest1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonTest1.Location = New System.Drawing.Point(3, 3)
-        Me.ButtonTest1.Name = "ButtonTest1"
-        Me.ButtonTest1.Size = New System.Drawing.Size(89, 57)
-        Me.ButtonTest1.TabIndex = 0
-        Me.ButtonTest1.Text = "Button1"
-        Me.ButtonTest1.UseVisualStyleBackColor = True
-        '
-        'TextBoxWIWE
-        '
-        Me.TextBoxWIWE.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBoxWIWE.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.TextBoxWIWE.Location = New System.Drawing.Point(3, 3)
-        Me.TextBoxWIWE.Name = "TextBoxWIWE"
-        Me.TextBoxWIWE.Size = New System.Drawing.Size(557, 35)
-        Me.TextBoxWIWE.TabIndex = 2
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = Global.WIWEdetector.My.Resources.Resources.SM_kicsi
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(89, 57)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
@@ -137,6 +140,7 @@ Partial Class Form1
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel3.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -146,6 +150,6 @@ Partial Class Form1
     Friend WithEvents ButtonScan As Button
     Friend WithEvents TextBoxInfo As TextBox
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents ButtonTest1 As Button
     Friend WithEvents TextBoxWIWE As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
