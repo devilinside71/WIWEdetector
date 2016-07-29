@@ -29,6 +29,7 @@ Partial Class Form1
         Me.TextBoxWIWE = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ButtonArchive = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -105,6 +106,7 @@ Partial Class Form1
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.PictureBox1, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.ButtonArchive, 0, 2)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(572, 3)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -127,6 +129,16 @@ Partial Class Form1
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'ButtonArchive
+        '
+        Me.ButtonArchive.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ButtonArchive.Location = New System.Drawing.Point(3, 129)
+        Me.ButtonArchive.Name = "ButtonArchive"
+        Me.ButtonArchive.Size = New System.Drawing.Size(89, 57)
+        Me.ButtonArchive.TabIndex = 1
+        Me.ButtonArchive.Text = "Archiválás"
+        Me.ButtonArchive.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -152,4 +164,5 @@ Partial Class Form1
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents TextBoxWIWE As TextBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ButtonArchive As Button
 End Class

@@ -83,6 +83,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Archive.vb" />
     <Compile Include="BTDetector.vb" />
     <Compile Include="BTDeviceInfo.vb" />
     <Compile Include="DataLoad.vb" />
@@ -125,7 +126,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Lib\WIWEdevices.s3db" />
+    <None Include="Lib\WIWEdevices.s3db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -141,6 +144,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Arch\PlaceHolder.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="LabelSamples.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -158,9 +164,7 @@
     <None Include="Resources\SM_nagy.jpg" />
     <None Include="Resources\SM_kicsi.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Arch\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
