@@ -1,4 +1,5 @@
-﻿Public Class Form1
+﻿Imports System.Threading
+Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.Icon = My.Resources.wiwe_06x01bt_Awa_2
         Call LoadZPLSamples()
@@ -12,6 +13,10 @@
     End Sub
 
     Private Sub ButtonScan_Click(sender As Object, e As EventArgs) Handles ButtonScan.Click
+        TextBoxWIWE.Text = vbNullString
+        TextBoxInfo.Text = vbNullString
+        ButtonScan.Text = "XXX"
+
         Call DetectBT()
     End Sub
 

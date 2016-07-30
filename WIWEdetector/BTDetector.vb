@@ -11,11 +11,11 @@
         Dim hNap As String
         Dim hSap As String
         Dim hMac As String
+        Dim intWIWECount As Integer
 
-        Form1.TextBoxWIWE.Text = vbNullString
-        Form1.TextBoxInfo.Text = vbNullString
         sText = vbNullString
         fullText = vbNullString
+        intWIWECount = 0
         For i As Integer = 0 To count - 1
             Dim device As New BTDeviceInfo(array(i))
             hNap = Hex(device.Nap)
@@ -27,6 +27,7 @@
             fullText = fullText & device.RSSI & vbCrLf
 
             If IsWiwe(device.DeviceName, hNap) Then
+                intWIWECount = intWIWECount + 1
                 sText = hMac
                 If IsMACInTable("WIWEdevices.s3db", hMac) Then
                     fullText = fullText & "WIWE az adatbázisban" & vbCrLf
@@ -39,6 +40,14 @@
                 fullText = fullText & "nem WIWE" & vbCrLf
             End If
         Next
+        If intWIWECount = 0 Then
+            Form1.TextBoxWIWE.Text = "Nincs WIWE"
+        End If
+        If intWIWECount = 1 Then
+        End If
+        If intWIWECount > 1 Then
+
+        End If
         Form1.TextBoxInfo.Text = fullText
         If sText = vbNullString Then
             Form1.TextBoxWIWE.Text = "Nincs WIWE"
