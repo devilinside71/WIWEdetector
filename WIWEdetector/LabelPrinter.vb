@@ -9,9 +9,9 @@
         s = s.Replace("LABELQTY", Trim(CStr(pld)))
 
         'Console.WriteLine(s)
-        Debug.Print(s)
+        'Debug.Print(s)
         ' Open the printer dialog box, and then allow the user to select a printer.
-        'Res = ZebraPrint.SendStringToPrinter(printerwinnames(0), s)
+        res = ZebraPrint.SendStringToPrinter(printerwinnames(0), s)
 
     End Sub
 End Module

@@ -45,7 +45,7 @@
                     strInfoText = strInfoText & "nem WIWE" & vbCrLf
                 End If
             Next
-            Debug.Print(strInfoText)
+            Console.WriteLine(strInfoText)
             If intWIWECount = 0 Then
                 Form1.TextBoxWIWE.Text = "Nincs új WIWE"
             End If

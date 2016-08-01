@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <printers>
   <printer name="WIWE MAC Címke (ZPL)">
-    <winname>ZDesigner TLP 2824 Plus (ZPL)</winname>
+    <winname>GC420T</winname>
   </printer>
 </printers> 
