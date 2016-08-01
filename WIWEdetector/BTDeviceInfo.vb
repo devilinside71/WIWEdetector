@@ -15,16 +15,6 @@ Public Class BTDeviceInfo
     Private mdtmLastUsed As DateTime
     Private mblnRemembered As Boolean
     Private mintRSSI As Integer
-
-
-    Public Property DeviceName() As String
-        Get
-            Return mstrDeviceName
-        End Get
-        Set(value As String)
-            mstrDeviceName = value
-        End Set
-    End Property
     Public Property Authenticated As Boolean
         Get
             Return mblnAuthenticated
@@ -89,6 +79,16 @@ Public Class BTDeviceInfo
             mintRSSI = value
         End Set
     End Property
+    Public Property DeviceName() As String
+        Get
+            Return mstrDeviceName
+        End Get
+        Set(ByVal value As String)
+            mstrDeviceName = value
+        End Set
+    End Property
+
+
     Public Sub New(device_info As BluetoothDeviceInfo)
         Me.Authenticated = device_info.Authenticated
         Me.Connected = device_info.Connected
