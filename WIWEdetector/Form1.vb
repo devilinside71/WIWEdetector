@@ -31,40 +31,33 @@ Public Class Form1
     Private Sub ThreadTask()
         'A BT kezelés külön threadben legyen, különben elsőbbséget élvez
         'és nem enged a futás végéig semmit csinálni
+        Dim bc As New InTheHand.Net.Sockets.BluetoothClient()
+        Dim deviceArray As InTheHand.Net.Sockets.BluetoothDeviceInfo() = bc.DiscoverDevices()
+        Dim count As Integer = deviceArray.Length
+        Dim sText As String
+        Dim fullText As String
+        Dim hNap As String
+        Dim hSap As String
+        Dim hMac As String
+        Dim intWIWECount As Integer
+        sText = vbNullString
+        fullText = vbNullString
+        intWIWECount = 0
+        Debug.Print("Devices: " & count)
+        For i As Integer = 0 To count - 1
+            hNap = Hex(deviceArray(i).DeviceAddress.Nap)
+            hSap = Hex(deviceArray(i).DeviceAddress.Sap)
+            hMac = hNap & hSap
 
-        Try
-            Dim bc As New InTheHand.Net.Sockets.BluetoothClient()
-            Dim deviceArray As InTheHand.Net.Sockets.BluetoothDeviceInfo() = bc.DiscoverDevices()
-            Dim count As Integer = deviceArray.Length
-            Dim sText As String
-            Dim fullText As String
-            Dim hNap As String
-            Dim hSap As String
-            Dim hMac As String
-            Dim intWIWECount As Integer
-            sText = vbNullString
-            fullText = vbNullString
-            intWIWECount = 0
-            Debug.Print("Devices: " & count)
-            For i As Integer = 0 To count - 1
-                hNap = Hex(deviceArray(i).DeviceAddress.Nap)
-                hSap = Hex(deviceArray(i).DeviceAddress.Sap)
-                hMac = hNap & hSap
+            fullText = GetFullText(deviceArray(i).DeviceName, hNap, hSap)
 
-                fullText = GetFullText(deviceArray(i).DeviceName, hNap, hSap)
-
-                Debug.Print(fullText)
-                Me.SetScanText(fullText)
-                If IsWiwe(deviceArray(i).DeviceName, hNap) Then
-                    intWIWECount += intWIWECount
-                End If
-            Next
-            Debug.Print("WIWEs found: " & intWIWECount)
-        Catch ex As Exception
-            MessageBox.Show("Valószínűleg a Bluetooth nincs bekapcsolva")
-        End Try
-
-
+            Debug.Print(fullText)
+            Me.SetScanText(fullText)
+            If IsWiwe(deviceArray(i).DeviceName, hNap) Then
+                intWIWECount += intWIWECount
+            End If
+        Next
+        Debug.Print("WIWEs found: " & intWIWECount)
         Me.SetLabelText("")
 
     End Sub
