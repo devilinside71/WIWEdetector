@@ -77,7 +77,7 @@ Partial Class Form1
         Me.ButtonScan.Name = "ButtonScan"
         Me.ButtonScan.Size = New System.Drawing.Size(557, 59)
         Me.ButtonScan.TabIndex = 0
-        Me.ButtonScan.Text = "Keresés"
+        Me.ButtonScan.Text = "START"
         Me.ButtonScan.UseVisualStyleBackColor = True
         '
         'TextBoxInfo
