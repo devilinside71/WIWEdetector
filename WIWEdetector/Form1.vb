@@ -13,10 +13,6 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonScan_Click(sender As Object, e As EventArgs) Handles ButtonScan.Click
-        TextBoxWIWE.Text = vbNullString
-        TextBoxInfo.Text = vbNullString
-        ButtonScan.Text = "XXX"
-
         Call DetectBT()
     End Sub
 
