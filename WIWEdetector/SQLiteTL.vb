@@ -51,6 +51,7 @@ Module SQLiteTL
             Console.WriteLine([error])
             'MessageBox.Show([error])
         End Try
+        Debug.Print("IsMACInTable Devices table: " & device_mac & ": " & res)
         Return res
     End Function
 
@@ -62,9 +63,9 @@ Module SQLiteTL
         data.Add("TimeStamp", Now)
         Try
             db.Insert("Devices", data)
+            Debug.Print("InsertWIWEData Devices table: " & device_name & "- " & device_mac)
         Catch crap As Exception
             MessageBox.Show(crap.Message)
         End Try
-
     End Sub
 End Module
