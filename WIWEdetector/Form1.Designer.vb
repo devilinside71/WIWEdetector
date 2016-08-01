@@ -30,7 +30,6 @@ Partial Class Form1
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ButtonArchive = New System.Windows.Forms.Button()
-        Me.LabelStatus = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -57,17 +56,15 @@ Partial Class Form1
         '
         Me.TableLayoutPanel2.ColumnCount = 1
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.ButtonScan, 0, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.ButtonScan, 0, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.TextBoxInfo, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.TextBoxWIWE, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.LabelStatus, 0, 2)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 4
+        Me.TableLayoutPanel2.RowCount = 3
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(563, 319)
         Me.TableLayoutPanel2.TabIndex = 0
@@ -76,11 +73,11 @@ Partial Class Form1
         '
         Me.ButtonScan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ButtonScan.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.ButtonScan.Location = New System.Drawing.Point(3, 256)
+        Me.ButtonScan.Location = New System.Drawing.Point(3, 257)
         Me.ButtonScan.Name = "ButtonScan"
-        Me.ButtonScan.Size = New System.Drawing.Size(557, 60)
+        Me.ButtonScan.Size = New System.Drawing.Size(557, 59)
         Me.ButtonScan.TabIndex = 0
-        Me.ButtonScan.Text = "START"
+        Me.ButtonScan.Text = "Keresés"
         Me.ButtonScan.UseVisualStyleBackColor = True
         '
         'TextBoxInfo
@@ -90,7 +87,7 @@ Partial Class Form1
         Me.TextBoxInfo.Multiline = True
         Me.TextBoxInfo.Name = "TextBoxInfo"
         Me.TextBoxInfo.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxInfo.Size = New System.Drawing.Size(557, 121)
+        Me.TextBoxInfo.Size = New System.Drawing.Size(557, 185)
         Me.TextBoxInfo.TabIndex = 1
         '
         'TextBoxWIWE
@@ -143,16 +140,6 @@ Partial Class Form1
         Me.ButtonArchive.Text = "Archiválás"
         Me.ButtonArchive.UseVisualStyleBackColor = True
         '
-        'LabelStatus
-        '
-        Me.LabelStatus.AutoSize = True
-        Me.LabelStatus.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelStatus.Font = New System.Drawing.Font("Courier New", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.LabelStatus.Location = New System.Drawing.Point(3, 190)
-        Me.LabelStatus.Name = "LabelStatus"
-        Me.LabelStatus.Size = New System.Drawing.Size(557, 63)
-        Me.LabelStatus.TabIndex = 3
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -178,5 +165,4 @@ Partial Class Form1
     Friend WithEvents TextBoxWIWE As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ButtonArchive As Button
-    Friend WithEvents LabelStatus As Label
 End Class
