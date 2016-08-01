@@ -1,5 +1,8 @@
 ﻿'http://www.dreamincode.net/forums/topic/157830-using-sqlite-with-c%23/
+Imports System.Collections.Generic
+Imports System.Data
 Imports System.Data.SQLite
+Imports System.Windows.Forms
 Public Class SQLiteDatabase
     Private dbConnection As [String]
 

@@ -42,7 +42,6 @@ Public Class Form1
         sText = vbNullString
         fullText = vbNullString
         intWIWECount = 0
-        Debug.Print("Devices: " & count)
         For i As Integer = 0 To count - 1
             hNap = Hex(deviceArray(i).DeviceAddress.Nap)
             hSap = Hex(deviceArray(i).DeviceAddress.Sap)
@@ -50,15 +49,14 @@ Public Class Form1
 
             fullText = GetFullText(deviceArray(i).DeviceName, hNap, hSap)
 
+            Console.WriteLine(fullText)
             Debug.Print(fullText)
             Me.SetScanText(fullText)
-            If IsWiwe(deviceArray(i).DeviceName, hNap) Then
-                intWIWECount += intWIWECount
-            End If
+            'TextBoxScanResult.Text = fullText
         Next
-        Debug.Print("WIWEs found: " & intWIWECount)
+        'LabelStatus.Text = ""
         Me.SetLabelText("")
-
+        'LabelStatus.Text = "Keresés..."
     End Sub
 
     Private Function GetFullText(device_name As String, device_nap As String, device_sap As String) As String
