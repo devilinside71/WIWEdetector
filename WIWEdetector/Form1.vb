@@ -18,11 +18,10 @@ Public Class Form1
         LabelStatus.Text = "Keresés..."
         TextBoxInfo.Text = vbNullString
         TextBoxWIWE.Text = vbNullString
-        'trd = New Thread(AddressOf ThreadTask)
-        'trd.IsBackground = True
-        'Debug.Print("Thread starts: " & Now)
-        'trd.Start()
-        Call ThreadTask()
+        trd = New Thread(AddressOf ThreadTask)
+        trd.IsBackground = True
+        Debug.Print("Thread starts: " & Now)
+        trd.Start()
     End Sub
 
     Private Sub ButtonArchive_Click(sender As Object, e As EventArgs) Handles ButtonArchive.Click
