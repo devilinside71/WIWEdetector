@@ -67,5 +67,6 @@ Module SQLiteTL
         Catch crap As Exception
             MessageBox.Show(crap.Message)
         End Try
+
     End Sub
 End Module
