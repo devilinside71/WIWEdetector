@@ -49,7 +49,7 @@ Partial Class Form1
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(670, 325)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(959, 504)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'TableLayoutPanel2
@@ -66,16 +66,16 @@ Partial Class Form1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(563, 319)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(809, 498)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'ButtonScan
         '
         Me.ButtonScan.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonScan.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.ButtonScan.Location = New System.Drawing.Point(3, 257)
+        Me.ButtonScan.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.ButtonScan.Location = New System.Drawing.Point(3, 400)
         Me.ButtonScan.Name = "ButtonScan"
-        Me.ButtonScan.Size = New System.Drawing.Size(557, 59)
+        Me.ButtonScan.Size = New System.Drawing.Size(803, 95)
         Me.ButtonScan.TabIndex = 0
         Me.ButtonScan.Text = "START"
         Me.ButtonScan.UseVisualStyleBackColor = True
@@ -83,21 +83,22 @@ Partial Class Form1
         'TextBoxInfo
         '
         Me.TextBoxInfo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBoxInfo.Location = New System.Drawing.Point(3, 66)
+        Me.TextBoxInfo.Font = New System.Drawing.Font("Courier New", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.TextBoxInfo.Location = New System.Drawing.Point(3, 102)
         Me.TextBoxInfo.Multiline = True
         Me.TextBoxInfo.Name = "TextBoxInfo"
         Me.TextBoxInfo.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxInfo.Size = New System.Drawing.Size(557, 185)
+        Me.TextBoxInfo.Size = New System.Drawing.Size(803, 292)
         Me.TextBoxInfo.TabIndex = 1
         '
         'TextBoxWIWE
         '
         Me.TextBoxWIWE.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBoxWIWE.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.TextBoxWIWE.Font = New System.Drawing.Font("Courier New", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.TextBoxWIWE.Location = New System.Drawing.Point(3, 3)
         Me.TextBoxWIWE.Multiline = True
         Me.TextBoxWIWE.Name = "TextBoxWIWE"
-        Me.TextBoxWIWE.Size = New System.Drawing.Size(557, 57)
+        Me.TextBoxWIWE.Size = New System.Drawing.Size(803, 93)
         Me.TextBoxWIWE.TabIndex = 2
         '
         'TableLayoutPanel3
@@ -108,7 +109,7 @@ Partial Class Form1
         Me.TableLayoutPanel3.Controls.Add(Me.PictureBox1, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.ButtonArchive, 0, 2)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(572, 3)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(818, 3)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 5
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
@@ -116,7 +117,7 @@ Partial Class Form1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(95, 319)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(138, 498)
         Me.TableLayoutPanel3.TabIndex = 1
         '
         'PictureBox1
@@ -125,7 +126,7 @@ Partial Class Form1
         Me.PictureBox1.Image = Global.WIWEdetector.My.Resources.Resources.SM_kicsi
         Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(89, 57)
+        Me.PictureBox1.Size = New System.Drawing.Size(132, 93)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -133,9 +134,10 @@ Partial Class Form1
         'ButtonArchive
         '
         Me.ButtonArchive.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonArchive.Location = New System.Drawing.Point(3, 129)
+        Me.ButtonArchive.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.ButtonArchive.Location = New System.Drawing.Point(3, 201)
         Me.ButtonArchive.Name = "ButtonArchive"
-        Me.ButtonArchive.Size = New System.Drawing.Size(89, 57)
+        Me.ButtonArchive.Size = New System.Drawing.Size(132, 93)
         Me.ButtonArchive.TabIndex = 1
         Me.ButtonArchive.Text = "Archiválás"
         Me.ButtonArchive.UseVisualStyleBackColor = True
@@ -144,7 +146,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(670, 325)
+        Me.ClientSize = New System.Drawing.Size(959, 504)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "Form1"
         Me.Text = "WIWE Bluetooth detector     ©2020 Sanatmetal Kft"

@@ -23,7 +23,7 @@
                 strNap = Hex(device.Nap)
                 strSap = Hex(device.Sap)
                 strMac = strNap & strSap
-                strInfoText = strInfoText & "---" & Now & "------------------------" & vbCrLf
+                strInfoText = strInfoText & "---" & Now & "---" & vbCrLf
                 strInfoText = strInfoText & device.DeviceName & vbCrLf
                 strInfoText = strInfoText & strMac & vbCrLf
                 strInfoText = strInfoText & device.RSSI & vbCrLf
