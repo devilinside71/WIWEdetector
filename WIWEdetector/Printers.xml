@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <printers>
+  <printer name="SósT">
+    <winname>TLP2824A</winname>
+  </printer>
   <printer name="WIWE MAC Címke (ZPL)">
     <winname>GC420T</winname>
+  </printer>
+  <printer name="SósT hálózatról">
+    <winname>\\SM-TSOS3.ad.sanatmetal.hu\TLP2824A</winname>
   </printer>
 </printers> 
