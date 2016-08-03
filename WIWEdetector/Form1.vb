@@ -1,5 +1,4 @@
 ﻿Imports System.Threading
-Imports System.Windows.Forms
 Public Class Form1
     Private trd As Thread
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -79,10 +78,10 @@ Public Class Form1
                         intWIWECount = intWIWECount + 1
                         strInfoText = strInfoText & "Új WIWE" & vbCrLf
                     Else
-                        strInfoText = strInfoText & "WIWE az adatbázisban" & vbCrLf
+                        strInfoText = strInfoText & "WIWE már az adatbázisban" & vbCrLf
                     End If
                 Else
-                    strInfoText = strInfoText & "nem WIWE" & vbCrLf
+                    strInfoText = strInfoText & "Nem WIWE" & vbCrLf
                 End If
             Next
             Console.WriteLine(strInfoText)
