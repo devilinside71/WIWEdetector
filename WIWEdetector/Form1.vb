@@ -24,4 +24,8 @@ Public Class Form1
     Private Sub TextBoxInfo_TextChanged(sender As Object, e As EventArgs) Handles TextBoxInfo.TextChanged
         ButtonScan.Focus()
     End Sub
+
+    Private Sub ButtonPrinterTest_Click(sender As Object, e As EventArgs) Handles ButtonPrinterTest.Click
+        Call PrintZPL("TESZT12345678", 1)
+    End Sub
 End Class

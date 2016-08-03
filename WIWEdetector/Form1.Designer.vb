@@ -30,10 +30,13 @@ Partial Class Form1
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ButtonArchive = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.ButtonPrinterTest = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -108,6 +111,7 @@ Partial Class Form1
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.PictureBox1, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.ButtonArchive, 0, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel4, 0, 3)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(818, 3)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -142,6 +146,29 @@ Partial Class Form1
         Me.ButtonArchive.Text = "Archiválás"
         Me.ButtonArchive.UseVisualStyleBackColor = True
         '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.ColumnCount = 1
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel4.Controls.Add(Me.ButtonPrinterTest, 0, 0)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 300)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 2
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(132, 93)
+        Me.TableLayoutPanel4.TabIndex = 2
+        '
+        'ButtonPrinterTest
+        '
+        Me.ButtonPrinterTest.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ButtonPrinterTest.Location = New System.Drawing.Point(3, 3)
+        Me.ButtonPrinterTest.Name = "ButtonPrinterTest"
+        Me.ButtonPrinterTest.Size = New System.Drawing.Size(126, 40)
+        Me.ButtonPrinterTest.TabIndex = 0
+        Me.ButtonPrinterTest.Text = "Nyomtató teszt"
+        Me.ButtonPrinterTest.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -155,6 +182,7 @@ Partial Class Form1
         Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel3.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -167,4 +195,6 @@ Partial Class Form1
     Friend WithEvents TextBoxWIWE As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ButtonArchive As Button
+    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents ButtonPrinterTest As Button
 End Class
