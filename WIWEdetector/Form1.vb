@@ -14,7 +14,6 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonScan_Click(sender As Object, e As EventArgs) Handles ButtonScan.Click
-        'Call DetectBT()
         ButtonScan.Text = "Keresés..."
         TextBoxInfo.Text = vbNullString
         TextBoxWIWE.Text = vbNullString
@@ -35,7 +34,7 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonPrinterTest_Click(sender As Object, e As EventArgs) Handles ButtonPrinterTest.Click
-        Call PrintZPL("TESZT12345678", 1)
+        Call LabelPrinter.PrintZPL("TESZT12345678", 1)
     End Sub
 
 
