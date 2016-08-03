@@ -148,8 +148,13 @@ Public Class ZebraPrint
         InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(TypeOfLanguage)
     End Sub
 
-    'Convert non ASCII characters to ZPL _XX_XX format
-    'System.Web should be added to references manually
+
+    ''' <summary>
+    ''' Converts UTF8 text to ZPL compatible string (_XX_XX format)
+    ''' System.Web should be added to references manually
+    ''' </summary>
+    ''' <param name="utf8text">Input text</param>
+    ''' <returns>ZPL compatible string</returns>
     Public Shared Function GetZPLutf8Code(utf8text As String) As String
         Dim result As String
         result = vbNullString

@@ -19,14 +19,11 @@ Public Class Form1
         TextBoxInfo.Text = vbNullString
         TextBoxWIWE.Text = vbNullString
         ButtonScan.BackColor = SystemColors.Highlight
-        'trd = New Thread(AddressOf DetectBT_Thread)
-        'trd = New Thread(AddressOf DetectBT)
         trd = New Thread(AddressOf ThreadTask)
         trd.Priority = ThreadPriorityLevel.Normal
         trd.IsBackground = True
         Console.WriteLine("Scanning Thread starts: " & Now)
         trd.Start()
-        'ButtonScan.Text = "START"
     End Sub
 
     Private Sub ButtonArchive_Click(sender As Object, e As EventArgs) Handles ButtonArchive.Click
@@ -43,6 +40,7 @@ Public Class Form1
 
 
     Private Sub ThreadTask()
+        'Must be within this class
         Try
             Dim devices As New List(Of BTDeviceInfo)()
             Dim bc As New InTheHand.Net.Sockets.BluetoothClient()
@@ -110,27 +108,37 @@ Public Class Form1
         Call SetButtonText("START")
 
     End Sub
-
+    ''' <summary>
+    ''' Execute database and printing operations
+    ''' </summary>
+    ''' <param name="wiwe_name">WIWE device name</param>
+    ''' <param name="wiwe_mac">WIWE BT MAC address</param>
     Private Sub ProcessNewWIWE(wiwe_name As String, wiwe_mac As String)
         Call SetWIWEText(wiwe_mac)
         Call InsertWIWEData("WIWEdevices.s3db", wiwe_mac, wiwe_name)
         Call PrintZPL(wiwe_mac, 1)
     End Sub
-    Private Function IsWiwe(device_name As String, hdevice_nap As String) As Boolean
+    ''' <summary>
+    ''' Determine if device is a WIWE based on device name and chipset manufacturer
+    ''' </summary>
+    ''' <param name="device_name">WIWE device nama</param>
+    ''' <param name="device_nap">Chipset manufacturer NAP code</param>
+    ''' <returns>True if device is a WIWE</returns>
+    Private Function IsWiwe(device_name As String, device_nap As String) As Boolean
         'Ellenőrzi, hogy WIWE-e
         '1., WIWE a kezdete a névnek
         '2., B0B4 a BT chip gyártója
         Dim res As Boolean
 
         res = False
-        If device_name.StartsWith("WIWE") And hdevice_nap = "B0B4" Then
+        If device_name.StartsWith("WIWE") And device_nap = "B0B4" Then
             res = True
         End If
 
         Return res
     End Function
 
-    'Threadsafe control handling, must within this class
+    'Threadsafe control handling, must be within this class
     Delegate Sub SetWIWETextCallback([text] As String)
     Delegate Sub SetInfoTextCallback([text] As String)
     Delegate Sub SetButtonTextCallback([text] As String)
