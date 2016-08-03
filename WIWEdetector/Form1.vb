@@ -134,7 +134,7 @@ Public Class Form1
     Delegate Sub SetWIWETextCallback([text] As String)
     Delegate Sub SetInfoTextCallback([text] As String)
     Delegate Sub SetButtonTextCallback([text] As String)
-    Delegate Sub SetButtonColorCallback([text] As Color)
+    Delegate Sub SetButtonColorCallback([col] As Color)
     Private Sub SetWIWEText(ByVal [text] As String)
         ' InvokeRequired required compares the thread ID of the
         ' calling thread to the thread ID of the creating thread.
