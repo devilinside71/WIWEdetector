@@ -74,6 +74,7 @@ Partial Class Form1
         '
         'ButtonScan
         '
+        Me.ButtonScan.BackColor = System.Drawing.SystemColors.Control
         Me.ButtonScan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ButtonScan.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.ButtonScan.Location = New System.Drawing.Point(3, 400)
@@ -81,7 +82,7 @@ Partial Class Form1
         Me.ButtonScan.Size = New System.Drawing.Size(803, 95)
         Me.ButtonScan.TabIndex = 0
         Me.ButtonScan.Text = "START"
-        Me.ButtonScan.UseVisualStyleBackColor = True
+        Me.ButtonScan.UseVisualStyleBackColor = False
         '
         'TextBoxInfo
         '

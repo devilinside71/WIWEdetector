@@ -1,4 +1,5 @@
 ﻿Imports System.Threading
+Imports System.Windows.Forms
 Public Class Form1
     Private trd As Thread
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -18,6 +19,7 @@ Public Class Form1
         ButtonScan.Text = "Keresés..."
         TextBoxInfo.Text = vbNullString
         TextBoxWIWE.Text = vbNullString
+        ButtonScan.BackColor = SystemColors.Highlight
         'trd = New Thread(AddressOf DetectBT_Thread)
         'trd = New Thread(AddressOf DetectBT)
         trd = New Thread(AddressOf ThreadTask)
@@ -84,13 +86,17 @@ Public Class Form1
                 End If
             Next
             Console.WriteLine(strInfoText)
+
             If intWIWECount = 0 Then
+                Call SetButtoncolor(SystemColors.Control)
                 Call SetWIWEText("Nincs új WIWE")
             End If
             If intWIWECount = 1 Then
+                Call SetButtoncolor(Color.MediumSeaGreen)
                 Call ProcessNewWIWE(strWIWEName, strWIWEMac)
             End If
             If intWIWECount > 1 Then
+                Call SetButtoncolor(Color.Crimson)
                 Call SetWIWEText("Több új WIWE eszköz érzékelve")
             End If
             Call SetInfoText(strInfoText)
@@ -98,10 +104,12 @@ Public Class Form1
 
         Catch ex As Exception
             If ex.Message.Contains("No supported Bluetooth protocol stack found") Then
-                MessageBox.Show("Nincs bekapcsolva a Bluetooth")
+                Call SetButtoncolor(SystemColors.Control)
+                MessageBox.Show("Nincs bekapcsolva a Bluetooth", "FIGYELEM!", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         End Try
         Call SetButtonText("START")
+
     End Sub
 
     Private Sub ProcessNewWIWE(wiwe_name As String, wiwe_mac As String)
@@ -127,6 +135,7 @@ Public Class Form1
     Delegate Sub SetWIWETextCallback([text] As String)
     Delegate Sub SetInfoTextCallback([text] As String)
     Delegate Sub SetButtonTextCallback([text] As String)
+    Delegate Sub SetButtonColorCallback([text] As Color)
     Private Sub SetWIWEText(ByVal [text] As String)
         ' InvokeRequired required compares the thread ID of the
         ' calling thread to the thread ID of the creating thread.
@@ -158,6 +167,17 @@ Public Class Form1
             Me.Invoke(d, New Object() {[text]})
         Else
             Me.ButtonScan.Text = [text]
+        End If
+    End Sub
+    Private Sub SetButtoncolor(ByVal [col] As Color)
+        ' InvokeRequired required compares the thread ID of the
+        ' calling thread to the thread ID of the creating thread.
+        ' If these threads are different, it returns true.
+        If Me.ButtonScan.InvokeRequired Then
+            Dim d As New SetButtonColorCallback(AddressOf SetButtoncolor)
+            Me.Invoke(d, New Object() {[col]})
+        Else
+            Me.ButtonScan.BackColor = [col]
         End If
     End Sub
 End Class
