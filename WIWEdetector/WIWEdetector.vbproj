@@ -84,7 +84,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Archive.vb" />
-    <Compile Include="BTDetector.vb" />
     <Compile Include="BTDeviceInfo.vb" />
     <Compile Include="DataLoad.vb" />
     <Compile Include="Form1.vb">

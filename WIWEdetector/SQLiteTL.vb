@@ -13,11 +13,6 @@ Module SQLiteTL
             For Each r As DataRow In resultTable.Rows
                 Console.WriteLine(r("DeviceMAC").ToString() & ", " & r("DeviceName").ToString() & ", " & r("TimeStamp").ToString())
             Next
-
-
-
-
-            'recipeDataGrid.DataSource = resultTable
         Catch fail As Exception
             Dim [error] As [String] = "Hiba ListTableContent:" & vbLf & vbLf
             [error] += fail.Message.ToString() + vbLf & vbLf
@@ -42,9 +37,6 @@ Module SQLiteTL
                     res = True
                 End If
             Next
-
-
-
         Catch fail As Exception
             Dim [error] As [String] = "Hiba IsMACInTable:" & vbLf & vbLf
             [error] += fail.Message.ToString() + vbLf & vbLf
